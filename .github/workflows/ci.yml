@@ -11,14 +11,7 @@ on:
 
 jobs:
   linux:
-    runs-on: ${{ matrix.config.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        config:
-          # macOS is still unsupported by ocr-fileformat, sorry.
-          # - { os: macos-12 }
-          - { os: ubuntu-22.04 }
+    runs-on: ubuntu-22.04
 
     steps:
     - uses: actions/checkout@v3
